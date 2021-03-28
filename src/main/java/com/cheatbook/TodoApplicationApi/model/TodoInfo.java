@@ -1,8 +1,6 @@
 package com.cheatbook.TodoApplicationApi.model;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoField;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
