@@ -35,7 +35,7 @@ public class TodoApiController {
      * @param model
      * @return
      */
-    @GetMapping("/list")
+    @GetMapping
     public List<TodoInfo> showList(Model model) {
         return repository.findAll();
     }
@@ -47,7 +47,7 @@ public class TodoApiController {
      * @param result
      * @return
      */
-    @PostMapping("/registration")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void registration(@RequestBody TodoInfo todoInfo) {
         todoInfo.setRegistrationTime(LocalDateTime.now());
@@ -61,7 +61,7 @@ public class TodoApiController {
      * @param model
      * @return
      */
-    @PutMapping("/edit/{taskId}")
+    @PutMapping(path = "{taskId}")
     public TodoInfo editData(@PathVariable Long taskId) {
         return repository.findById(taskId).get();
     }
